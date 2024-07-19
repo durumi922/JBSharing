@@ -1,0 +1,23 @@
+/* 예약 내역 페이지용 CSS */
+
+/* 각 예약 항목 스타일 */
+.reservation-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* 숙소 이름 스타일 */
+.reservation-item h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* 날짜 및 상태 스타일 */
+.reservation-item p {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+    

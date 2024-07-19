@@ -1,0 +1,274 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.header {
+    background-color: #ffffff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 50px;
+    line-height: 60px;
+}
+.header .logo-container {
+    width: 90px;
+    height: 40px;
+    border-radius: 30%;
+    overflow: hidden;
+}
+.header .logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.nav-btn {
+    list-style-type: none;
+    margin: auto 5%;
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.nav-btn a {
+    color: midnightblue;
+    text-decoration: none;
+}
+.banner {
+    width: 100%;
+    height: 220px; /* 배너 높이 수정 */
+    overflow: hidden;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* 배너 배경색 설정 */
+}
+.banner img {
+    width: auto; /* 너비 자동 조정 */
+    height: 80%; /* 높이 100% */
+    object-fit: contain; /* 이미지가 잘리지 않도록 설정 */
+}
+.content {
+    padding: 20px;
+}
+.dropdown-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+.dropdown {
+    position: relative;
+    text-align: left; /* 텍스트 정렬을 왼쪽으로 */
+}
+.dropdown label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.dropdown input[type="date"],
+.dropdown input[type="text"],
+.dropdown .traveler-select-button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px; /* 최소 너비 설정 */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: 1px solid #800080;
+    border-radius: 5px;
+    margin: 2px;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+.dropdown-content .bold {
+    font-weight: bold;
+    border: none;
+    display: block;
+}
+.dropdown-content .cities {
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* 자동 너비 설정 */
+    gap: 10px;
+    margin-top: 10px;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.traveler-select {
+    position: relative;
+}
+.traveler-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px; /* 최소 너비 설정 */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.traveler-dropdown .traveler-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.traveler-dropdown .traveler-option:last-child {
+    margin-bottom: 0;
+}
+.traveler-dropdown button {
+    background-color: #ddd;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+.traveler-dropdown span {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 5px;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+.traveler-select.active .traveler-dropdown {
+    display: block;
+}
+.search-button {
+    background-color: #800080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px; /* 높이 동일하게 설정 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button i {
+    vertical-align: middle;
+}
+@media (max-width: 768px) {
+    .dropdown-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .dropdown {
+        width: 100%;
+    }
+}
+/* 추가된 스타일 */
+
+/* 편의시설 드롭다운 스타일 */
+.dropdown .grid-container {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px; /* 최소 너비 설정 */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.dropdown .grid-container.grid-row {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    margin-top: 10px;
+}
+.dropdown-content.show {
+    display: block;
+}
+.dropdown:hover .grid-container {
+    display: grid;
+}
+
+/* 추가된 숙소 스타일 */
+.accommodations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+.accommodation {
+    border: 1px solid #cb9bfb;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    padding: 10px;
+    margin-bottom: 20px; /* 추가된 줄 간격 */
+}
+
+.accommodation img {
+    width: 130px;
+    height: 130px; /* 원하는 크기로 변경 */
+    object-fit: cover;
+    margin-top: 10px;
+    margin-left: 7px;
+}
+
+.accommodation .info {
+    padding: 7px;
+}
+
+.accommodation h3 {
+    margin: 0 0 7px 0; /* 각 줄 간격 조정 */
+    margin: 0;
+    font-size: 1.2em;
+    font-family: 'GmarketSansMedium';
+    border-bottom: none;
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.accommodation p {
+    margin: 5px 0 ;
+    color: #555;
+    font-size: 13px;
+    border-bottom: none; /* 밑줄 제거 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.accommodation a {
+    text-decoration: none; /* 링크에 밑줄 제거 */
+    color: inherit; /* 링크 색상 상속 */
+}
+
+.accommodation:hover {
+    transform: translateY(-10px);
+}

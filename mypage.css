@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+.header {
+    background-color: #ffffff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 50px;
+    line-height: 60px;
+}
+.header .logo-container {
+    width: 90px;
+    height: 40px;
+    border-radius: 30%;
+    overflow: hidden;
+}
+.header .logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.nav-btn {
+    list-style-type: none;
+    margin: auto 5%;
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.nav-btn a {
+    color: hsl(286, 91%, 65%);
+    text-decoration: none;
+    border: 4.3px solid #f2b661;
+    border-radius: 35%;
+    padding: 5px 5px;
+}
+.banner {
+    width: auto;
+    height: 300px; /* 배너 높이 수정 */
+    overflow: hidden;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* 배너 배경색 설정 */
+    position: relative;
+}
+.banner img {
+    width: auto; /* 너비 자동 조정 */
+    height: 60%; /* 높이 100% */
+    object-fit: contain; /* 이미지가 잘리지 않도록 설정 */
+}
+.content {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 80px;
+    width: 100%;
+}
+.side-bar {
+    display: block;
+    background-color: #cc9cff;
+    color: #fff;
+    border-radius: 30px; /* 직사각형 형태 */
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden; /* 반응형 애니메이션용 */
+    transition: all 0.5s ease; /* 반응형 애니메이션 */
+    position: fixed;
+    height: 300px; /* 세로 길이를 10px 늘림 */
+    margin-top: 250px;
+    margin-left: 10px;
+    top: 10px;
+    bottom: 10px;
+    width: 60px; /* 기본 너비를 아이콘만 보이도록 설정 */
+}
+.side-bar:hover {
+    width: 220px; /* 마우스를 인식하면 전체 너비 표시 */
+}
+.side-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.side-bar a {
+    display: flex; /* Flexbox로 변경 */
+    align-items: center; /* 세로 가운데 정렬 */
+    height: 35px; /* 줄 높이 조정 */
+    padding: 8px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+
+.side-bar .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.side-bar .user-info img {
+    width: 200px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.side-bar .user-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+.side-bar a:hover {
+    color: #000;
+}
+.side-bar ul li:hover {
+    background-color: #C300FF;
+    color: #000;
+    border-radius: 5px; /* 직사각형 형태 */
+}
+.side-bar div {
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Noto Sans KR';
+    padding: 0 0 0 5px; /* 아이콘과 텍스트 사이 여백 조정 */
+}
+.side-bar ul li:not(:last-child) {
+    border-bottom: 2px solid #ccc; /* 회색 선 추가 */
+}
+.side-bar .side-bar-text {
+    display: inline-block;
+    font-family: 'GmarketSansMedium';
+    margin-left: 3px; /* 아이콘과 텍스트 사이 간격 조정 */
+    font-size: 20px;
+}
+.side-bar .side-bar-icon {
+    width: 60px; /* 아이콘 크기 조정 */
+    color: #fff; /* 아이콘 색상 조정 */
+}
+.side-bar a:hover .side-bar-icon {
+    color: #000; /* 마우스를 올렸을 때 아이콘 색상 변경 */
+}
+.side-bar:not(:hover) .side-bar-text {
+    display: none; /* 평소에는 텍스트 숨기기 */
+}
+@media screen and (max-width:160px) {
+    .side-bar { /* 1단계 */
+        width: 60px;
+    }
+}
+@media screen and (max-width:160px) {
+    .menu #expand-menu:not(:checked) ~ ul { /* 2단계 */
+        display: none;
+    }
+}
+/* .main-content {
+    margin-left: 500px; /* 사이드바 오른쪽 공간 확보 
+    padding: 20px;
+    margin-top: 10px;
+}
+*/
+.main-content img {
+    width: 170px; /* 이미지 크기 조정 */
+    height: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 650px;
+}
+
+.main-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-left: 80px;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 50px;
+    margin-left: 65px;
+    text-align: center;
+    margin-top: 25px;
+}
+

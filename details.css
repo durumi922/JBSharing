@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'GmarketSansMedium', 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.header {
+    background-color: #ffffff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 50px;
+    line-height: 60px;
+}
+.header .logo-container {
+    width: 90px;
+    height: 40px;
+    border-radius: 30%;
+    overflow: hidden;
+}
+.header .logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.nav-btn {
+    list-style-type: none;
+    margin: auto 5%;
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.nav-btn a {
+    color: midnightblue;
+    text-decoration: none;
+}
+.nav-btn a:hover {
+    background-color: #0056b3;
+}
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 35px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container img {
+    flex: 1;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.image-1 {
+    width: 180px;
+    height: 180px;
+}
+
+.image-2 {
+    width: 180px;
+    height: 180px;
+}
+
+.image-3 {
+    width: 180px;
+    height: 180px;
+}
+
+.details, .host-info, .reviews, .facilities {
+    margin-bottom: 20px;
+}
+
+.details h2, .host-info h2, .reviews h2, .facilities h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007BFF;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.facilities {
+    display: flex;
+    justify-content: space-between;
+}
+
+.facilities .facility-list {
+    width: 48%;
+}
+
+.facilities h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.review {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.review p {
+    margin-bottom: 5px;
+}
+
+.review p:last-child {
+    margin-bottom: 0;
+}
+
+.host-info p, .facility-list ul li {
+    margin-bottom: 10px;
+}
+
+.host-info p:last-child, .facility-list ul li:last-child {
+    margin-bottom: 0;
+}
+
+.facility-list ul {
+    padding-left: 20px;
+}
+
+.facility-list ul li {
+    list-style: disc;
+}
+
+.reservation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reserve-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,22 @@
+/* 남긴 리뷰 페이지용 CSS */
+
+/* 각 리뷰 항목 스타일 */
+.review-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* 숙소 이름 스타일 */
+.review-item h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* 별점 및 작성일자 스타일 */
+.review-item p {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}

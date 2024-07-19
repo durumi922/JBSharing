@@ -1,0 +1,150 @@
+/* profile.css */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+.header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 50px;
+    line-height: 60px;
+}
+.header .logo-container {
+    width: 90px;
+    height: 40px;
+    border-radius: 30%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.header .logo-container img {
+    width: 100%;
+    object-fit: cover;
+    height: 50px;
+    margin-right: 10px;
+}
+.nav-btn {
+    list-style-type: none;
+    margin: auto 5%;
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.nav-btn a {
+    color: midnightblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+.banner {
+    width: 100%;
+    height: 220px; /* 배너 높이 수정 */
+    overflow: hidden;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* 배너 배경색 설정 */
+    position: relative;
+}
+.banner img {
+    width: auto; /* 너비 자동 조정 */
+    height: 100%; /* 높이 100% */
+    object-fit: contain; /* 이미지가 잘리지 않도록 설정 */
+}
+.banner .banner-text {
+    position: absolute;
+    color: #800080;
+    /*font-size: 1.5em;*/
+    font-weight: bold;
+    margin-top: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+.content {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 80px;
+    width: 100%;
+    padding: 20px;
+}
+.container {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.profile {
+    width: 130px;
+    height: 130px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #800080;
+    overflow: visible;
+}
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.user-info {
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+.buttons .button {
+    background-color: #7F4BAFFF;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.buttons .button-secondary {
+    background-color: #7F4BAFFF;
+}
+
+.user-info label {
+    display: block;
+    margin: 10px 0;
+}
+
+.user-info input {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
